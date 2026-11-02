@@ -1,5 +1,3 @@
-# CS2413-Intrusion-Detection-System
-CS2413 Final Project - Detecting Suspicious Network Activity Using an Intrusion Detection System
 # cs2413-Intrusion-Detection-Project
 CS 2413 Group-Two Project: Detecting suspicious network activity using Suricata IDS in an isolated virtual laboratory.
 # Java Intrusion Detection System (IDS)
