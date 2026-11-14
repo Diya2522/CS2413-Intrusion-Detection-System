@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.IOException;
 
+public class Main {
+
 public static void main(String[] args){
     try {
         String fileName = "data/network_events.csv";
@@ -76,4 +78,4 @@ public static void main(String[] args){
     } catch (IllegalArgumentException e) {
         System.err.println("Configuration error: " + e.getMessage());
     }
-}
+}}
