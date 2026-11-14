@@ -45,4 +45,12 @@ public class NetworkEvent {
     public long getBytes() {
         return bytes;
     }
+
+    public String toString() {
+        return timestamp + " | " + sourceIP + " -> " + 
+                destinationIP + " | Port: " +
+                destinationPort + " | Type: " +
+                eventType + " | Bytes: " +
+                bytes;
+    }
 }
