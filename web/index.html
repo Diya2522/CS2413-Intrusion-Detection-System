@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java IDS Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Intrusion Detection System</h1>
+        <p>CS2413 Group Two - Network Security Monitoring Dashboard</p>
+    </header>
+
+    <main>
+        <section class="dashboard">
+
+            <!-- Choose which CSV dataset to analyze -->
+            <div class="dataset-controls">
+                <label for="datasetSelect">Select Network Traffic Dataset:</label>
+                <select id="datasetSelect">
+                    <option value="realistic">Realistic Traffic</option>
+                    <option value="normal">Normal Traffic</option>
+                    <option value="malicious">Malicious Traffic</option>
+                </select>
+                <button id="refreshButton">Refresh Dashboard</button>
+            </div>
+
+            <p id="statusMessage" role="status"></p>
+
+            <h2>Security Overview</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Network Events</h3>
+                    <p id="totalEvents">--</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Alerts</h3>
+                    <p id="totalAlerts">--</p>
+                </div>
+                <div class="stat-card">
+                    <h3>High Severity</h3>
+                    <p id="highAlerts">--</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Medium Severity</h3>
+                    <p id="mediumAlerts">--</p>
+                </div>
+            </div>
+
+            <h2>Detected Attack Types</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Brute-force</h3>
+                    <p id="bruteForce">--</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Port Scans</h3>
+                    <p id="portScan">--</p>
+                </div>
+                <div class="stat-card">
+                    <h3>High Traffic</h3>
+                    <p id="highTraffic">--</p>
+                </div>
+            </div>
+
+            <h2>Security Alerts</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Severity</th>
+                            <th>Attack Type</th>
+                            <th>Source IP</th>
+                            <th>Destination IP</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alertsTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
