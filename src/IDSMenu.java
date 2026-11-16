@@ -31,7 +31,7 @@ public class IDSMenu {
                     break;
                 case 5:
                     System.out.println("\nRunning automated tests ");
-                    //IDSTest.runTests();
+                    IDSTest.runTests();
                     break;
                 case 0:
                     flag = false;
